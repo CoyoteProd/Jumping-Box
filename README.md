@@ -21,6 +21,7 @@ On the controller you can send `open` or `close` command to control the box
 ## Build and Installation
 
  - Cross Compile `MaestroServer.c` for arm v5.1 with
+   
    `arm-linux-gnueabi-gcc -Wall --static -O2 -marm -march=armv5 MaestroServer.c -o MaestroServer -lm`
  - transfer the executable to your drone
  - Make script to load module 
