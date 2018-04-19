@@ -2,9 +2,9 @@
 
 Add a cool designed Box on the top of your Parrot Jumping Drone that you can open and close remotely.
 
-![BoxOnDrone](./BoxOnDrone.jpg)
+![BoxOnDrone](./BoxOnDrone1.jpg)
 
-![BoxClose](./BoxClose.jpg)
+![BoxClose](./BoxOnDrone2.jpg)
 
 
 The heart of this box is a [Pololu Maestro servo controller](https://www.pololu.com/product/1351)
