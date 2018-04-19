@@ -9,12 +9,8 @@ Add a cool designed Box on the top of your Parrot Jumping Drone that you can ope
 
 The heart of this box is a [Pololu Maestro servo controller](https://www.pololu.com/product/1351)
 
-## Diagram is like this :
-                   |------|        |-O-|
-|-()-|  ---------- |      | ------ |   |
-drone   OTG Cable  |------|        |___|
-		micro usb  Maestro         Servo
-
+## Diagram :
+                   
 ![BoxOpen](./BoxOpen.jpg)
 	
 ## How it's Work
@@ -23,10 +19,11 @@ On the Drone you have a `MaestroServer.c` which listen on 4567 udp port for comm
 On the controller you can send `open` or `close` command to control the box
 
 ## Build and Installation : 
- - Cross Compile `MaestroServer.c` for arm v5.1
+ - Cross Compile `MaestroServer.c` for arm v5.1 with
    `arm-linux-gnueabi-gcc -Wall --static -O2 -marm -march=armv5 MaestroServer.c -o MaestroServer -lm`
  - transfer the executable to your drone
  - Make script to load module 
+ 
    `insmod /lib/modules/2.6.36/kernel/drivers/usb/class/cdc-acm.ko` on Sumo
    `insmod /lib\modules\2.6.36-102961-gf9f11f3\kernel\drivers\usb/class/cdc-acm.ko` on Diesel
  - and run MaestroServer executable
